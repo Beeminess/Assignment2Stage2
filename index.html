@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Chef School</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo-immage">
+                <img src="asset/Logo01.jpg" alt="Logo" class="placeholder-image">
+            </div>
+            
+            <nav class="nav">
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">Bakery Course</a>
+                <a href="#" class="nav-link">Cook Book</a>
+                <a href="#" class="nav-link">Shop</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="search-icon" aria-label="Search">🔍</button>
+                <button class="btn-book">Book</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Little Chef School</h1>
+                    <p class="hero-text">Little Chef School is a fun baking space where kids learn to mix, bake, and decorate delicious treats. We teach creativity, teamwork, and confidence one recipe at a time!.</p>
+                    <button class="btn-explore">Explore Our Courses</button>
+                </div>
+
+                <div class="hero-images">
+                    <div class="hero-side-images">
+                        <canvas id="hero-sequence" class="hero-sequence-canvas" aria-label="Cake rotation animation""></canvas>
+                    </div>
+                    
+                    <div class="hero-side-images">
+                        <div class="hero-small-image">
+                            <img src="asset/Kid_Girl_bake_01.png" alt="Travel cakes" class="placeholder-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top programs Section -->
+        <section class="top-cakes">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Top Program Packages</h2>
+                    <div class="section-header-actions">
+                        <button class="btn-explore-all">Explore all program</button>
+                    </div>
+                </div>
+                <div class="filter-bar">
+                    <button class="filter-btn active">Popular</button>
+                    <button class="filter-btn">Cake</button>
+                    <button class="filter-btn">Beginer</button>
+                    <button class="filter-btn">Pie</button>
+                    <button class="filter-btn">Tart</button>
+                    <button class="filter-btn">Cookies</button>
+                    <button class="filter-btn">Cream Puff</button>
+                    <button class="filter-btn">More <span>▼</span></button>
+                </div>
+                <div class="cakes-grid">
+                    <div class="cakes-card">
+                        <article class="card">
+                            <model-viewer
+                                src="asset/strawberry.glb"
+                                alt="Macaron Cake 3D Model"
+                                camera-controls touch-action="pan-y" 
+                                disable-zoom
+                                auto-rotate 
+                                loading="lazy"
+                                field-of-view="33deg"
+                            ></model-viewer>
+                            <div class="card-content">
+                                <h3 class="card-title">Strawberry Cake Course</h3>
+                            </div>
+                        </div>
+        
+                        <div class="cakes-card">
+                            <article class="card">
+                                <model-viewer
+                                    src="asset/blackforest.glb"
+                                    alt="Macaron Cake 3D Model"
+                                    camera-controls touch-action="pan-y" 
+                                    disable-zoom
+                                    auto-rotate 
+                                    loading="lazy"
+                                    field-of-view="33deg"
+                                ></model-viewer>
+                                <div class="card-content">
+                                    <h3 class="card-title">Blackforest Cake Course</h3>
+                                </div>
+                            </div>
+                            <div class="cakes-card">
+                                <article class="card">
+                                    <model-viewer
+                                        src="asset/chocolate.glb"
+                                        alt="Macaron Cake 3D Model"
+                                        camera-controls touch-action="pan-y" 
+                                        disable-zoom
+                                        auto-rotate 
+                                        loading="lazy"
+                                        field-of-view="33deg"
+                                    ></model-viewer>
+                                    <div class="card-content">
+                                        <h3 class="card-title">Chocolate Cake Course</h3>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Stories Section -->
+        <section class="latest-stories">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Stories</h2>
+                    <button class="btn-explore-all">Explore all stories</button>
+                </div>
+                <div class="stories-layout">
+                    <div class="story-featured">
+                        <div class="story-image">
+                            <img src="asset/Banner_01.jpg" alt="Los Angeles food & drink guide" class="placeholder-image">
+                        </div>
+                        <div class="story-content">
+                            <span class="story-category">Enjoy Our Activities</span>
+                            <h3 class="story-title">Baking teaches patience, teamwork, and problem-solving. Kids learn to follow instructions, organize tasks, and work together skills that support them at home, in school, and in everyday life.</h3>
+                            <span class="story-meta">Nov 12 2025</span>
+                        </div>
+                    </div>
+                    <div class="stories-sidebar">
+                        <div class="story-card">
+                            <div class="story-card-image">
+                                <img src="asset/Article01.jpg" alt="Good Deals" class="">
+                            </div>
+                            <div class="story-card-content">
+                                <span class="story-category">Discounts</span>
+                                <h4 class="story-card-title">See more good deals for your little chef. </h4>
+                                <span class="story-meta">Nov 12 2025</span>
+                            </div>
+                        </div>
+                        <div class="story-card">
+                            <div class="story-card-image">
+                                <img src="asset/64a0efd011b500fdb0674ae60abcd30d.jpg" alt="Special Events" class="placeholder-image">
+                            </div>
+                            <div class="story-card-content">
+                                <span class="story-category">Special events</span>
+                                <h4 class="story-card-title">Let's bake together. Try and learn.</h4>
+                                <span class="story-meta">Nov 12 2025</span>
+                            </div>
+                        </div>
+                        <div class="story-card">
+                            <div class="story-card-image">
+                                <article class="card">
+                                    <model-viewer
+                                    src="asset/Macaron_cake.glb"
+                                    alt="Macaron Cake 3D Model"
+                                    auto-rotate 
+                                    camera-controls touch-action="pan-y" 
+                                    loading="lazy"
+                                    field-of-view="40deg"
+                                ></model-viewer>
+                                </article>
+                                
+                            </div>
+                            <div class="story-card-content">
+                                <span class="story-category">Have a Good and Fun Experience </span>
+                                <h4 class="story-card-title"> Affordable Program and Attraction Deals</h4>
+                                <span class="story-meta">Nov 12 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trekker's Highlights Section -->
+        <section class="trekkers-highlights">
+            <div class="section-container">
+                <h2 class="section-title">Highlights</h2>
+                <div class="highlights-layout">
+                    <div class="review-card">
+                        <div class="review-profile">
+                            <div class="profile-image">
+                                <img src="asset/Mum.jpg" alt="Maria Angelica" class="placeholder-image">
+                            </div>
+                            <div class="profile-info">
+                                <h4 class="profile-name">Maria Angelica</h4>
+                                <span class="profile-location">Ontario, Canada</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                        <h3 class="review-title">Where Kids Bake, Learn, and Shine.</h3>
+                        <p class="review-text">As a mom, I’m always looking for activities that help my daughter grow, not just keep her busy. Little Chef School has been amazing. She comes home excited, proud of the treats she made, and eager to show us what she learned. The teachers are kind, patient, and really pay attention to safety, which gives me so much peace of mind.</p>
+                    </div>
+                    <div class="highlights-media">
+                        <div class="media-card">
+                            <img src="asset/Learning.jpg" alt="Travel highlight" class="placeholder-image">
+                        </div>
+                        <div class="media-card">
+                            <img src="asset/2294ed5a4ce38e2e632db0f24bcdea31.jpg" alt="Travel highlight" class="placeholder-image">
+    
+                            <p class="video-title">So many Course to Explore</p>
+                        </div>
+                        <button class="btn-see-more">See more highlights</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <h2 class="cta-title">Get Our Promotions Straight to Your Inbox</h2>
+                <form class="cta-form">
+                    <input type="email" placeholder="Enter your email address" class="cta-input" required>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+                <p class="cta-text">Subscribe to exclusive promotions and events.</p>
+                <a href="#" class="privacy-link">Privacy Policy</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">Logo</div>
+                <div class="social-section">
+                    <p class="social-text">Follow us on</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">Facebook</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">Pinterest</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 class="footer-column-title">About Us</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Little Chef School</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Write for Us</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Top Program</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Basic Baking For Kids</a></li>
+                        <li><a href="#">Cookie </a></li>
+                        <li><a href="#">Chocolate Cake</a></li>
+                        <li><a href="#">Blackforest Cake</a></li>
+                        <li><a href="#">Macaron Cake</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Shop</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Kitchen Equipments for kids</a></li>
+                        <li><a href="#">Bakery ingredients</a></li>
+                        <li><a href="#">Cook Book</a></li>
+                        <li><a href="#">Souvenirs</a></li>
+                        <li><a href="#">Bakery </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Careers</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Teacher</a></li>
+                        <li><a href="#">Baker</a></li>
+                        <li><a href="#">ETC.</a></li>
+                        
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Little Chef School. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
