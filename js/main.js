@@ -2,7 +2,7 @@
 
 const HERO_FRAME_COUNT = 43;
 // Using absolute path for better compatibility:
-const HERO_FRAME_FOLDER = '../asset/cake_video'; 
+const HERO_FRAME_FOLDER = 'asset/cake_video'; 
 const HERO_FRAME_BASENAME = 'kling_20251128_Image_to_Video_rotate_a_c_5710_0_';
 const HERO_FRAME_EXTENSION = '.png'; 
 
