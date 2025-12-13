@@ -115,10 +115,39 @@ function renderHeroFrame(index) {
 }
 
 function onHeroScroll() {
-  const scrollTop = window.scrollY || window.pageYOffset;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollFraction = docHeight > 0 ? scrollTop / docHeight : 0;
+  if (!heroCanvas) return;
 
+  // Get the hero section element
+  const heroSection = heroCanvas.closest('.hero');
+  if (!heroSection) return;
+
+  // Get hero section position and dimensions
+  const heroRect = heroSection.getBoundingClientRect();
+  const heroTop = heroRect.top + window.scrollY;
+  const heroHeight = heroSection.offsetHeight;
+  const viewportHeight = window.innerHeight;
+
+  // Calculate scroll progress within the hero section
+  // When hero section top reaches viewport top, progress starts at 0
+  // When hero section bottom reaches viewport top, progress reaches 1
+  const scrollTop = window.scrollY || window.pageYOffset;
+  const heroStart = heroTop;
+  const heroEnd = heroTop + heroHeight - viewportHeight;
+  
+  // Calculate scroll progress (0 to 1) within the hero section
+  let scrollFraction = 0;
+  if (scrollTop <= heroStart) {
+    // Before hero section
+    scrollFraction = 0;
+  } else if (scrollTop >= heroEnd) {
+    // After hero section
+    scrollFraction = 1;
+  } else {
+    // Within hero section
+    scrollFraction = (scrollTop - heroStart) / (heroEnd - heroStart);
+  }
+
+  // Map scroll progress to frame index (0 to 42)
   const frameIndex = Math.min(
     HERO_FRAME_COUNT - 1,
     Math.floor(scrollFraction * HERO_FRAME_COUNT)
@@ -147,8 +176,10 @@ function initHeroScrollSequence() {
   });
 
   window.addEventListener('scroll', onHeroScroll, { passive: true });
-  
-  // Removed window.addEventListener('resize') as fixed sizing is requested.
+  window.addEventListener('resize', () => {
+    resizeHeroCanvas();
+    onHeroScroll(); // Recalculate scroll position after resize
+  });
 }
 
 document.addEventListener('DOMContentLoaded', initHeroScrollSequence);
